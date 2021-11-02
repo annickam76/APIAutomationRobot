@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.10.0 on darwin)" generated="20211021 12:05:27.966" rpa="false" schemaversion="2">
+<suite id="s1" name="TC001 GetRequest" source="/Users/annickam/PycharmProjects/APIAutomationRobot/TC001_GetRequest.robot">
+<test id="s1-t1" name="TC_001_Get_Request_Fetch_Status_Code">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>API_Testing</arg>
+<arg>{API_Base_Endpoint}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20211021 12:05:28.040" level="INFO">Creating Session using : alias=API_Testing, url={API_Base_Endpoint}, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20211021 12:05:28.040" endtime="20211021 12:05:28.040"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${Get_Response}</var>
+<arg>API_Testing</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20211021 12:05:28.041" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+<msg timestamp="20211021 12:05:28.041" level="FAIL">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</msg>
+<status status="FAIL" starttime="20211021 12:05:28.041" endtime="20211021 12:05:28.042"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Get_Response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20211021 12:05:28.042" endtime="20211021 12:05:28.042"/>
+</kw>
+<status status="FAIL" starttime="20211021 12:05:28.040" endtime="20211021 12:05:28.042">TypeError: RequestsOnSessionKeywords.get_on_session() missing 1 required positional argument: 'url'</status>
+</test>
+<status status="FAIL" starttime="20211021 12:05:27.968" endtime="20211021 12:05:28.042"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC001 GetRequest">TC001 GetRequest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211021 12:05:27.968" level="ERROR">Error in file '/Users/annickam/PycharmProjects/APIAutomationRobot/TC001_GetRequest.robot' on line 7: Setting variable '{API_Base_Endpoint}' failed: Invalid variable name '{API_Base_Endpoint}'.</msg>
+<msg timestamp="20211021 12:05:28.041" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+</errors>
+</robot>
